@@ -1,0 +1,5 @@
+dn: uid=ablondel,ou=August,ou=2018,ou=people,dc=42,dc=fr,dc=org
+changetype: modify
+replace: mobile
+mobile: 0600000000
+
