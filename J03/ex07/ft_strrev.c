@@ -1,20 +1,22 @@
 char  *ft_strrev(char *str)
 {
   int i;
-  int j;
-  char *c;
+  char tmp;
+  int ln;
 
-  j = 0;
+  ln = 0;
   i = 0;
-  while (str[j] != '\0')
+  while (str[ln] != '\0')
   {
-    while (str[i] != '\0')
-    {
-      i++;
-    }
-    str[j]= str[i];
-    c = str[j];
-    i--;
-    j++;
+    ln++;
   }
+  while (i < ln)
+  {
+    ln--;
+    tmp = str[i];
+    str[i] = str[ln];
+    str[ln] = tmp;
+    i++;
+  }
+  return (str);
 }
